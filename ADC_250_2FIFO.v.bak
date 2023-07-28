@@ -1,0 +1,26 @@
+module ADC_250_2FIFO ( 
+	input        sys_rst,   
+	input        sysclk_50m,          
+	
+	input        ADC_DCO_P,     
+	input        ADC_DCO_N,        
+	input  [7:0] ADC_DIN_A,     
+	input  [7:0] ADC_DIN_B,       
+	
+	output 		 sysclk_250m,
+	output       ADC_CLK,      
+	output [7:0] ADC_DOUT,   
+	output       ADC_PDWN          
+);
+
+pll	pll_m ( 
+	.inclk0(sysclk_50m),
+	.areset(~sys_rst),	//高电平复位
+	.c0(sysclk_250m),
+	.locked()
+);
+
+
+
+
+endmodule 

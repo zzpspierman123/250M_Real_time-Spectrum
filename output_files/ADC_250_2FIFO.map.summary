@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Jul 28 14:08:14 2023
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : ADC_250_2FIFO
+Top-level Entity Name : ADC_250_2FIFO
+Family : Cyclone IV E
+Total logic elements : 1,119
+    Total combinational functions : 617
+    Dedicated logic registers : 859
+Total registers : 859
+Total pins : 42
+Total virtual pins : 0
+Total memory bits : 172,544
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

@@ -1,0 +1,44 @@
+module HS_AD9481(
+	input		      sys_clk,
+	input          sys_rst_n,
+	input          dco_p,
+	input          dco_n,
+	
+	input  [7:0]   din_a,
+	input  [7:0]   din_b,
+	
+	output         adc_clk,
+	output [7:0]   dout,
+	output         pdwn
+);
+
+reg [7:0] din_a_r;
+reg [7:0] din_b_r;
+
+wire rdempty_sig;
+reg  rdreq_sig;
+
+assign adc_clk = sys_clk;
+assign pdwn    = ~sys_rst_n;
+
+always @(posedge dco_n) 
+begin 
+	din_a_r <= din_a;
+end 
+
+always @(posedge dco_p) 
+begin 
+	din_b_r <= din_b;
+end 
+
+always @(posedge sys_clk) 
+begin 
+	if (!sys_rst_n) 
+	begin 
+		rdreq_sig <= 1'b0;
+	end 
+	else 
+	begin 
+		rdreq_sig <= ~rdempty_sig;
+	end 
+end 
