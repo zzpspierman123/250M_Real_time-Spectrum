@@ -33,8 +33,3 @@
 
 ***STM32_Code：*** 该文件包含STM32H750的算法代码。
 <div>
- 
-### 👨🏻‍💻Maintainers
-####     Hi there 👋 I'm [ZhouZhanPeng](https://github.com/zzpspierman123)
-> A Sophomore Student in [HuaiHua University](http://www.hhtc.edu.cn/?affichelist-2)
-> 🌱 [@zzpspierman123](https://github.com/zzpspierman123)
